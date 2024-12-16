@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Portfolio - Sudhanshu Sharma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header Section */
+        header {
+            height: 100vh;
+            background: linear-gradient(to bottom right, #000428, #004e92);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeInUp 2s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        header .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        header .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* About Section */
+        section {
+            padding: 60px 20px;
+        }
+
+        #about {
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: #333;
+            color: white;
+        }
+
+        #projects h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: #444;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Skills Section */
+        #skills {
+            text-align: center;
+            background: linear-gradient(to bottom right, #004e92, #000428);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        #skills h2 {
+            margin-bottom: 20px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background: white;
+            color: #004e92;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        #contact h2 {
+            margin-bottom: 20px;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #contact input, #contact textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+        }
+
+        #contact button {
+            background: #61dafb;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        #contact button:hover {
+            background: #004e92;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Sudhanshu Sharma</h1>
+            <p>Machine Learning Enthusiast | Developer</p>
+            <div class="social-links">
+                <a href="https://github.com/sudhanshusharma99">GitHub</a>
+                <a href="mailto:sudhanshusharma20002@gmail.com">Email</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate developer skilled in machine learning, data analysis, and full-stack development. I strive to create impactful solutions to real-world problems.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <h3>Handwritten Signature Recognition</h3>
+                <p>Developed a system to extract and authenticate handwritten signatures for fraud detection.</p>
+            </div>
+            <div class="project-card">
+                <h3>Salary Prediction Model</h3>
+                <p>Built a predictive model using machine learning to forecast salaries based on key metrics.</p>
+            </div>
+            <div class="project-card">
+                <h3>Automated Data Preprocessing</h3>
+                <p>Created a system for automated data cleaning, improving efficiency for data analysis projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">Python</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Data Analysis</div>
+            <div class="skill">Regression Models</div>
+            <div class="skill">Classification Models</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sudhanshu Sharma. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
